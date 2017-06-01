@@ -23,6 +23,9 @@ export function install(Vue) {
                             binding.value && typeof binding.value === 'function' && binding.value();
                         }
                     },
+                }, {
+                    polyfill: false,
+                    only: 'touch',
                 });
                 el.dataset.pressureBind = 'true';
             }
